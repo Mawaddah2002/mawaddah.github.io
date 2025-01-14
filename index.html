@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مودة العواد - السيرة الذاتية</title>
+    <title>Mawaddah Alawad - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -13,8 +13,8 @@
             padding: 0;
             background: linear-gradient(to right, #1c1c1c, #383838);
             color: #f5f5f5;
-            direction: rtl;
-            text-align: right;
+            direction: ltr;
+            text-align: left;
         }
 
         header {
@@ -135,57 +135,50 @@
     </style>
     <script>
         function switchLanguage(lang) {
-            const sections = document.querySelectorAll('[data-lang]');
-            sections.forEach(section => {
-                section.style.display = section.getAttribute('data-lang') === lang ? 'block' : 'none';
-            });
+            const body = document.body;
+            const langElements = document.querySelectorAll('[data-lang]');
+            if (lang === 'ar') {
+                body.style.direction = 'rtl';
+                body.style.textAlign = 'right';
+                langElements.forEach(el => el.style.display = el.getAttribute('data-lang') === 'ar' ? 'block' : 'none');
+            } else {
+                body.style.direction = 'ltr';
+                body.style.textAlign = 'left';
+                langElements.forEach(el => el.style.display = el.getAttribute('data-lang') === 'en' ? 'block' : 'none');
+            }
         }
     </script>
 </head>
 <body>
     <header>
-        <h1>مودة أحمد العواد</h1>
+        <h1>Mawaddah Ahmad Alawad</h1>
         <nav>
             <ul>
-                <li><a href="#about">الملخص</a></li>
-                <li><a href="#experience">الخبرات</a></li>
-                <li><a href="#projects">المشاريع</a></li>
-                <li><a href="#skills">المهارات</a></li>
-                <li><a href="#contact">التواصل</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="language-switch">
-        <a href="#" onclick="switchLanguage('ar')">العربية</a> |
-        <a href="#" onclick="switchLanguage('en')">English</a>
+        <a href="#" onclick="switchLanguage('en')">English</a> |
+        <a href="#" onclick="switchLanguage('ar')">العربية</a>
     </div>
 
-    <section id="about" data-lang="ar">
-        <h2>الملخص المهني</h2>
-        <p>خريجة علوم حاسوب ذات سجل أكاديمي قوي وخبرة عملية في تطوير البرمجيات، تطوير الويب، والأمن السيبراني. متمرسة في البرمجة وتصميم واجهات المستخدم، ولدي شغف لإنشاء تطبيقات سهلة الاستخدام. متحمسة للمساهمة في مشاريع مبتكرة وتوسيع الخبرة في الذكاء الاصطناعي وهندسة البرمجيات.</p>
-    </section>
-    <section id="about" data-lang="en" style="display: none;">
-        <h2>Professional Summary</h2>
+    <section id="about" data-lang="en">
+        <h2>About</h2>
         <p>A computer science graduate with a strong academic record and practical experience in software development, web development, and cybersecurity. Proficient in programming and user interface design, with a passion for creating user-friendly applications. Eager to contribute to innovative projects and expand expertise in artificial intelligence and software engineering.</p>
     </section>
-
-    <section id="experience" data-lang="ar">
-        <h2>الخبرات المهنية</h2>
-        <ul>
-            <li><strong>متدربة صيفية</strong> | الرئاسة العامة لشؤون المسجد الحرام والمسجد النبوي (يونيو 2024 – أغسطس 2024)
-                <ul>
-                    <li>رقمنة الكتب النادرة باستخدام أدوات متقدمة.</li>
-                    <li>تصميم نماذج واجهات التطبيقات باستخدام Figma.</li>
-                    <li>تطوير موقع المكتبة باستخدام HTML وCSS وJavaScript.</li>
-                    <li>تنفيذ مهام الدعم الفني وتحسين الأداء.</li>
-                    <li>المشاركة في إدارة الأمن السيبراني وإعداد التقارير.</li>
-                </ul>
-            </li>
-        </ul>
+    <section id="about" data-lang="ar" style="display: none;">
+        <h2>الملخص</h2>
+        <p>خريجة علوم حاسوب ذات سجل أكاديمي قوي وخبرة عملية في تطوير البرمجيات، تطوير الويب، والأمن السيبراني. متمرسة في البرمجة وتصميم واجهات المستخدم، ولدي شغف لإنشاء تطبيقات سهلة الاستخدام. متحمسة للمساهمة في مشاريع مبتكرة وتوسيع الخبرة في الذكاء الاصطناعي وهندسة البرمجيات.</p>
     </section>
-    <section id="experience" data-lang="en" style="display: none;">
-        <h2>Professional Experience</h2>
+
+    <section id="experience" data-lang="en">
+        <h2>Experience</h2>
         <ul>
             <li><strong>Summer Trainee</strong> | General Presidency of Haramain (June 2024 – August 2024)
                 <ul>
@@ -198,16 +191,22 @@
             </li>
         </ul>
     </section>
-
-    <section id="projects" data-lang="ar">
-        <h2>المشاريع</h2>
+    <section id="experience" data-lang="ar" style="display: none;">
+        <h2>الخبرات</h2>
         <ul>
-            <li><strong>تَنفّس: رحلة عبر العقل</strong> (2024)
-                <p>لعبة RPG لزيادة الوعي حول القلق الاجتماعي باستخدام السرد التفاعلي وحل الألغاز.</p>
+            <li><strong>متدربة صيفية</strong> | الرئاسة العامة لشؤون المسجد الحرام والمسجد النبوي (يونيو 2024 – أغسطس 2024)
+                <ul>
+                    <li>رقمنة الكتب النادرة باستخدام أدوات متقدمة.</li>
+                    <li>تصميم نماذج واجهات التطبيقات باستخدام Figma.</li>
+                    <li>تطوير موقع المكتبة باستخدام HTML وCSS وJavaScript.</li>
+                    <li>تنفيذ مهام الدعم الفني وتحسين الأداء.</li>
+                    <li>المشاركة في إدارة الأمن السيبراني وإعداد التقارير.</li>
+                </ul>
             </li>
         </ul>
     </section>
-    <section id="projects" data-lang="en" style="display: none;">
+
+    <section id="projects" data-lang="en">
         <h2>Projects</h2>
         <ul>
             <li><strong>Tanafas: A Journey Through the Mind</strong> (2024)
@@ -215,16 +214,16 @@
             </li>
         </ul>
     </section>
-
-    <section id="skills" data-lang="ar">
-        <h2>المهارات</h2>
+    <section id="projects" data-lang="ar" style="display: none;">
+        <h2>المشاريع</h2>
         <ul>
-            <li><strong>لغات البرمجة:</strong> Python، Java، C، C++، JavaScript، HTML، CSS، PHP.</li>
-            <li><strong>أدوات وتقنيات:</strong> Unity، GameMaker Studio، Figma، MySQL، Docker.</li>
-            <li><strong>المهارات الشخصية:</strong> التواصل، العمل الجماعي، حل المشكلات، إدارة الوقت.</li>
+            <li><strong>تَنفّس: رحلة عبر العقل</strong> (2024)
+                <p>لعبة RPG لزيادة الوعي حول القلق الاجتماعي باستخدام السرد التفاعلي وحل الألغاز.</p>
+            </li>
         </ul>
     </section>
-    <section id="skills" data-lang="en" style="display: none;">
+
+    <section id="skills" data-lang="en">
         <h2>Skills</h2>
         <ul>
             <li><strong>Programming Languages:</strong> Python, Java, C, C++, JavaScript, HTML, CSS, PHP.</li>
@@ -232,24 +231,32 @@
             <li><strong>Soft Skills:</strong> Communication, teamwork, problem-solving, time management.</li>
         </ul>
     </section>
-
-    <section id="contact" data-lang="ar">
-        <h2>التواصل</h2>
-        <p>البريد الإلكتروني: <a href="mailto:mawaddaalawaid@gmail.com">mawaddaalawaid@gmail.com</a></p>
-        <p>الهاتف: <a href="tel:+966545492569">+966545492569</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/mawaddah-alawad-1807j2002" target="_blank">mawaddah-alawad</a></p>
-        <p>GitHub: <a href="https://github.com/Mawaddah2002" target="_blank">Mawaddah2002</a></p>
+    <section id="skills" data-lang="ar" style="display: none;">
+        <h2>المهارات</h2>
+        <ul>
+            <li><strong>لغات البرمجة:</strong> Python، Java، C، C++، JavaScript، HTML، CSS، PHP.</li>
+            <li><strong>أدوات وتقنيات:</strong> Unity، GameMaker Studio، Figma، MySQL، Docker.</li>
+            <li><strong>المهارات الشخصية:</strong> التواصل، العمل الجماعي، حل المشكلات، إدارة الوقت.</li>
+        </ul>
     </section>
-    <section id="contact" data-lang="en" style="display: none;">
+
+    <section id="contact" data-lang="en">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:mawaddaalawaid@gmail.com">mawaddaalawaid@gmail.com</a></p>
         <p>Phone: <a href="tel:+966545492569">+966545492569</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/mawaddah-alawad-1807j2002" target="_blank">mawaddah-alawad</a></p>
         <p>GitHub: <a href="https://github.com/Mawaddah2002" target="_blank">Mawaddah2002</a></p>
     </section>
+    <section id="contact" data-lang="ar" style="display: none;">
+        <h2>التواصل</h2>
+        <p>البريد الإلكتروني: <a href="mailto:mawaddaalawaid@gmail.com">mawaddaalawaid@gmail.com</a></p>
+        <p>الهاتف: <a href="tel:+966545492569">+966545492569</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/mawaddah-alawad-1807j2002" target="_blank">mawaddah-alawad</a></p>
+        <p>GitHub: <a href="https://github.com/Mawaddah2002" target="_blank">Mawaddah2002</a></p>
+    </section>
 
     <footer>
-        <p>&copy; 2024 مودة أحمد العواد</p>
+        <p>&copy; 2024 Mawaddah Ahmad Alawad</p>
     </footer>
 </body>
 </html>
