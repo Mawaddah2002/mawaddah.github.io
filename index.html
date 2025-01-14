@@ -54,6 +54,22 @@
             text-decoration: underline;
         }
 
+        section {
+            padding: 2rem;
+            margin: 2rem auto;
+            background: #2b2b2b;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+
+        h2 {
+            color: #00bcd4;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #00bcd4;
+            padding-bottom: 0.5rem;
+        }
+
         footer {
             text-align: center;
             padding: 1rem 0;
@@ -80,32 +96,23 @@
         .language-switch a:hover {
             text-decoration: underline;
         }
-    </style>
-    <script>
-        function switchLanguage(lang) {
-            const links = document.querySelectorAll('a[data-lang]');
-            links.forEach(link => {
-                let href = link.getAttribute('href');
-                if (lang === 'ar') {
-                    link.setAttribute('href', href.replace('/en/', '/ar/'));
-                } else {
-                    link.setAttribute('href', href.replace('/ar/', '/en/'));
-                }
-            });
+
+        ul {
+            padding-left: 20px;
         }
-    </script>
+    </style>
 </head>
 <body>
     <header>
         <h1>Mawaddah Ahmad Alawad</h1>
         <nav>
             <ul>
-                <li><a href="about.html" data-lang="en">About</a></li>
-                <li><a href="experience.html" data-lang="en">Experience</a></li>
-                <li><a href="projects.html" data-lang="en">Projects</a></li>
-                <li><a href="skills.html" data-lang="en">Skills</a></li>
-                <li><a href="education.html" data-lang="en">Education</a></li>
-                <li><a href="contact.html" data-lang="en">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -114,6 +121,72 @@
         <a href="#" onclick="switchLanguage('en')">English</a> |
         <a href="#" onclick="switchLanguage('ar')">العربية</a>
     </div>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>A computer science graduate with a strong academic record and practical experience in software development, web development, and cybersecurity. Proficient in programming and user interface design, with a passion for creating user-friendly applications. Eager to contribute to innovative projects and expand expertise in artificial intelligence and software engineering.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>Summer Trainee</strong> | General Presidency of Haramain (June 2024 – August 2024)
+                <ul>
+                    <li>Digitized rare books using advanced tools.</li>
+                    <li>Designed user-friendly application interfaces using Figma.</li>
+                    <li>Developed the library website using HTML, CSS, and JavaScript.</li>
+                    <li>Performed technical support tasks and optimized performance.</li>
+                    <li>Participated in cybersecurity management and report preparation.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Tanafas: A Journey Through the Mind</strong> (2024)
+                <p>An RPG game raising awareness about social anxiety through interactive storytelling and puzzles.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, Java, C, C++, JavaScript, HTML, CSS, PHP.</li>
+            <li><strong>Tools & Technologies:</strong> Unity, GameMaker Studio, Figma, MySQL, Docker.</li>
+            <li><strong>Soft Skills:</strong> Communication, teamwork, problem-solving, time management.</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education & Certifications</h2>
+        <ul>
+            <li><strong>Bachelor of Science in Computer Science</strong> | Umm Al-Qura University (August 2024)
+                <ul>
+                    <li>GPA: 3.91/4.00 (Excellent, First-Class Honors)</li>
+                </ul>
+            </li>
+            <li><strong>Certifications:</strong>
+                <ul>
+                    <li>Introduction to Artificial Intelligence | KAUST Academy (December 2022)</li>
+                    <li>Python Programming for AI | KAUST Academy (November 2022)</li>
+                    <li>Mathematics for AI | KAUST Academy (December 2022)</li>
+                    <li>Machine Learning | KAUST Academy (December 2022)</li>
+                    <li>Deep Learning | KAUST Academy (December 2022)</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mawaddaalawaid@gmail.com">mawaddaalawaid@gmail.com</a></p>
+        <p>Phone: <a href="tel:+966545492569">+966545492569</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/mawaddah-alawad-1807j2002" target="_blank">mawaddah-alawad</a></p>
+        <p>GitHub: <a href="https://github.com/Mawaddah2002" target="_blank">Mawaddah2002</a></p>
+    </section>
 
     <footer>
         <p>&copy; 2024 Mawaddah Ahmad Alawad</p>
